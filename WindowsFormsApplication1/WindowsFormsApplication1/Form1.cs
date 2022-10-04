@@ -128,7 +128,11 @@ Engineering Building");
 February 14, 2023
 Engineering Building");
 
+
+
+
             string currentText = comboBox1.SelectedItem.ToString();
+            eventName = currentText;
             String[] eventsx = events[currentText].Split('\n');
             textSpeaker.Text = eventsx[0];
             eventSpeaker = eventsx[0];

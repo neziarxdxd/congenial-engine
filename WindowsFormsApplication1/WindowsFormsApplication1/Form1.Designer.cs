@@ -124,10 +124,10 @@
             this.studentType.FormattingEnabled = true;
             this.studentType.Items.AddRange(new object[] {
             "Regular Student",
-            "Student Assistant ",
-            "Scholar Student ",
-            "Student with school benefits ",
-            "Student Athlete "});
+            "Student Assistant",
+            "Scholar Student",
+            "Student with school benefits",
+            "Student Athlete"});
             this.studentType.Location = new System.Drawing.Point(32, 332);
             this.studentType.Name = "studentType";
             this.studentType.Size = new System.Drawing.Size(121, 21);
