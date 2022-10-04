@@ -12,6 +12,20 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+        public static string a = "";
+        public static string b = "";
+        public static string c = "";
+        public static string name = "";
+        public static string gender = "";
+        public static string yearlevel = "";
+        public static string studentnumber = "";
+        public static string eventName = "";
+        public static string eventSpeaker= "";
+        public static string eventDate = "";
+        public static string eventPlace = "";
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -47,13 +61,83 @@ namespace WindowsFormsApplication1
             register.Add("Early", 100);
             register.Add("Special", 200);
 
-            String yearofStudent = yearLevel.Text;
-            String typeOfStudent = studentType.Text;
-            String regular = registrationType.Text;
-            double x = (level[yearofStudent] + register[regular]) * (1-types[typeOfStudent]);
-            MessageBox.Show("dffd "+x.ToString());
 
 
+
+            
+
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            name = textBox1.Text;
+            studentnumber = textBox2.Text;
+            gender = textBox3.Text;
+
+            a = yearLevel.Text;
+            b = studentType.Text;
+            c = registrationType.Text;
+            
+            
+            
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Dictionary<string,string> events = new Dictionary<string, string>();
+            events.Add("Google Glass Project: Better but banned!",@"Rosa Parks
+June 5, 2022
+LCT Building");
+            events.Add("Future of Communication", @"Jerry Hanna
+July 16, 2022
+LCT Building");
+            events.Add("Distance Education", @"Martha Thompson
+August 20, 2022
+TYK Buildings");
+            events.Add("Importance of Corporate Communications", @"Percy Jackson
+September 31, 2022
+Engineering Building"
+);
+            events.Add("Child Labor and related issues", @"Pedro San Vicente
+October 19, 2022
+TYK Building");
+            events.Add("Smart antenna for mobile communication", @"Juan Dela Cruz
+November 10, 2022
+Engineering Building");
+            events.Add("Low energy efficiency wireless", @"Harry Potter
+December 9, 2022
+Engineering Building");
+            events.Add("Communication network design", @"Sheldon Copper
+January 7, 2023
+Engineering Building");
+            events.Add("Plastic Solar Cell Technology", @"Walter White
+February 14, 2023
+Engineering Building");
+
+            string currentText = comboBox1.SelectedItem.ToString();
+            String[] eventsx = events[currentText].Split('\n');
+            textSpeaker.Text = eventsx[0];
+            eventSpeaker = eventsx[0];
+            textDate.Text = eventsx[1];
+           eventDate = eventsx[1];
+            textPlace.Text = eventsx[2];
+            eventPlace= eventsx[2];
+            
+            
         }
     }
 }

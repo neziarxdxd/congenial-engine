@@ -41,20 +41,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.registrationType = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textSpeaker = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textPlace = new System.Windows.Forms.TextBox();
             this.yearLevel = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textDate = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -177,13 +173,6 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Seminar Title";
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(222, 75);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 12;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -193,19 +182,12 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Speaker";
             // 
-            // textBox6
+            // textSpeaker
             // 
-            this.textBox6.Location = new System.Drawing.Point(220, 124);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 14;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(222, 175);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.textSpeaker.Location = new System.Drawing.Point(220, 124);
+            this.textSpeaker.Name = "textSpeaker";
+            this.textSpeaker.Size = new System.Drawing.Size(166, 20);
+            this.textSpeaker.TabIndex = 14;
             // 
             // label9
             // 
@@ -219,60 +201,19 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(217, 258);
+            this.label10.Location = new System.Drawing.Point(219, 209);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 19;
             this.label10.Text = "Place";
             // 
-            // textBox7
+            // textPlace
             // 
-            this.textBox7.Location = new System.Drawing.Point(218, 274);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 18;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(33, 462);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 13);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Total Cost";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(36, 478);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 20;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(154, 462);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 13);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Payment";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(157, 478);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 22;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(298, 475);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "COMPUTE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.textPlace.Location = new System.Drawing.Point(222, 225);
+            this.textPlace.Name = "textPlace";
+            this.textPlace.Size = new System.Drawing.Size(100, 20);
+            this.textPlace.TabIndex = 18;
+            this.textPlace.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // yearLevel
             // 
@@ -297,26 +238,58 @@
             this.label13.TabIndex = 26;
             this.label13.Text = "Year Level";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(32, 446);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 35);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Google Glass Project: Better but banned!",
+            "Future of Communication",
+            "Distance Education",
+            "Importance of Corporate Communications",
+            "Child Labor and related issues",
+            "Smart antenna for mobile communication",
+            "Low energy efficiency wireless",
+            "Communication network design",
+            "Plastic Solar Cell Technology"});
+            this.comboBox1.Location = new System.Drawing.Point(222, 73);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
+            this.comboBox1.TabIndex = 28;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textDate
+            // 
+            this.textDate.Location = new System.Drawing.Point(222, 176);
+            this.textDate.Name = "textDate";
+            this.textDate.Size = new System.Drawing.Size(164, 20);
+            this.textDate.TabIndex = 29;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1007, 545);
+            this.ClientSize = new System.Drawing.Size(496, 551);
+            this.Controls.Add(this.textDate);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.yearLevel);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textPlace);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textSpeaker);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.registrationType);
             this.Controls.Add(this.label5);
@@ -331,6 +304,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,20 +325,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox registrationType;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textSpeaker;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textPlace;
         private System.Windows.Forms.ComboBox yearLevel;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textDate;
     }
 }
 
